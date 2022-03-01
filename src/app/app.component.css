@@ -1,0 +1,47 @@
+.container-input {
+  width: 16rem;
+  height: 11rem;
+  background: #7ecba1;
+  margin: auto;
+  margin-top: 3rem;
+  border-radius: 5px;
+  padding: 24px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 100%;
+}
+form > input {
+  margin: 3px 0px;
+  padding: 4px;
+  border-radius: 5px;
+  height: 2rem;
+  outline: none;
+}
+button {
+  background-color: #e7eed2;
+  margin-top: 1.1rem;
+  border-radius: 5px;
+  height: 2rem;
+  cursor: pointer;
+  border-style: none;
+  box-shadow: 0px 0px 1px black;
+}
+button:hover {
+  background-color: #e7eed2d0;
+}
+
+.container-card {
+  background-color: #7ecba1;
+  width: 21rem;
+  align-items: center;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+}
