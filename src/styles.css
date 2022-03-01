@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  /* Created with https://www.css-gradient.com */
+  background: #476652;
+  background: -webkit-radial-gradient(center, #476652, #368c73);
+  background: -moz-radial-gradient(center, #476652, #368c73);
+  background: radial-gradient(ellipse at center, #476652, #368c73);
+}
