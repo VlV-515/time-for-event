@@ -1,12 +1,22 @@
 <div class="container-input">
   <form #formDate="ngForm" (ngSubmit)="onSave(formDate.value)">
-    <input required type="text" placeholder="Name Event" name="name" ngModel />
+    <input
+      required
+      type="text"
+      placeholder="Name Event"
+      name="tittle"
+      ngModel
+    />
     <input required type="date" placeholder="" name="date" ngModel />
     <button type="submit" [disabled]="formDate.invalid">Save</button>
   </form>
 </div>
 <div class="container-card">
-  &nbsp;
-  <app-card class="card"></app-card>
-  <app-card class="card"></app-card>
+  <ng-container *ngFor="let event of arrEvents; let i = index">
+    <app-card
+      class="card"
+      [dataEvent]="event"
+      (deleteNdx)="onDelete(i)"
+    ></app-card>
+  </ng-container>
 </div>

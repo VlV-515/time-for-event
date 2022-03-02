@@ -1,15 +1,15 @@
 <div class="container">
   <div class="container-days">
-    <h1>67</h1>
+    <h1>{{ dataEvent.days }}</h1>
     <p>days</p>
   </div>
   <div class="container-tittle">
-    <p>Eat banana</p>
+    <p>{{ dataEvent.tittle }}</p>
   </div>
   <div class="container-date">
-    <p>2022-03-12</p>
+    <p>{{ dataEvent.date }}</p>
   </div>
   <div class="container-button">
-    <button>Delete</button>
+    <button (click)="deleteNdx.emit()">Delete</button>
   </div>
 </div>

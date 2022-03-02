@@ -1,8 +1,9 @@
+import {
+  FormEventInterface,
+  EventFormatInterface,
+} from './interfaces/event.interface';
+import { EventService } from './services/event.service';
 import { Component } from '@angular/core';
-export interface EventInterface {
-  name: string;
-  date: string;
-}
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,16 @@ export interface EventInterface {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  onSave(data: EventInterface): void {
-    console.log(data);
-    
+  arrEvents: EventFormatInterface[] = [];
+  constructor(readonly eventSvc: EventService) {
+    this.eventSvc.getListEvents().subscribe((data) => {
+      this.arrEvents = data;
+    });
+  }
+  onSave(data: FormEventInterface): void {
+    this.eventSvc.addEvent(data);
+  }
+  onDelete(index: number): void {
+    this.eventSvc.deleteEvent(index);
   }
 }

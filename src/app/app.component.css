@@ -32,7 +32,7 @@ button {
 button:hover {
   background-color: #e7eed2d0;
 }
-
+/* TODO:Acomodar css para que no aparezca el container */
 .container-card {
   background-color: #7ecba1;
   width: 27rem;
