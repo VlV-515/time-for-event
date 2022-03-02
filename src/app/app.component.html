@@ -1,8 +1,8 @@
 <div class="container-input">
-  <form>
-    <input type="text" placeholder="Name Event" name="name" />
-    <input type="date" placeholder="" />
-    <button type="submit">Save</button>
+  <form #formDate="ngForm" (ngSubmit)="onSave(formDate.value)">
+    <input required type="text" placeholder="Name Event" name="name" ngModel />
+    <input required type="date" placeholder="" name="date" ngModel />
+    <button type="submit" [disabled]="formDate.invalid">Save</button>
   </form>
 </div>
 <div class="container-card">
